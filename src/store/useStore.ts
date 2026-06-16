@@ -26,7 +26,7 @@ interface DashboardState {
 
 export const useStore = create<DashboardState>((set) => ({
   darkMode: false,
-  sidebarOpen: true,
+  sidebarOpen: window.innerWidth > 768, // Agar screen 768px se badi hai toh open, warna closed
   activeTab: 'dashboard',
   transactions: [],
   loading: false,
