@@ -1,73 +1,33 @@
-# React + TypeScript + Vite
+# Business Intelligence Analytics Dashboard (TEYZIX CORE)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive, responsive Business Intelligence (BI) Dashboard designed for corporate leadership to monitor revenue trajectory, operational sales KPIs, department trends, and enterprise customer acquisition patterns in real-time. This application simulates advanced analytical environments like Power BI, Tableau, Zoho Analytics, and Google Looker Studio.
 
-Currently, two official plugins are available:
+## 🚀 Live Deployment & Source Code
+- **Deployment URL:** [https://teyzix-bi-analytics-dashboard-rr5h.vercel.app/]
+- **GitHub Repository:** [https://github.com/AbdulRaziqG0812/teyzix-bi-analytics-dashboard]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Core Engineering Features
+- **Global State Management:** Orchestrated via `Zustand` to manage theme synchronization, interactive viewport toggles, and unified client cache streams across various independent nodes.
+- **Asynchronous Telemetry:** Simulated network endpoints utilizing JavaScript Promise delays to accurately render loading, error catchers, and clear data states.
+- **Interactive Data Engineering:** Built using `Recharts` providing four distinct diagnostic layers:
+  1. *Revenue Trend Chart* (Area Layer with custom linear opacity)
+  2. *Sales Volume Comparison Chart* (Multi-metric stacked Bar Node)
+  3. *Total Customer Acquisition Chart* (Monotone structural Line Node)
+  4. *Global Regional Split Chart* (Granular donut Pie layout)
+- **Advanced Telemetry Matrix (Data Table):** Supports instant regex text search query matching, explicit client-side sorting algorithms (A-Z/numerical indexes), and strict component pagination dividers.
+- **Theme Persistency Architecture:** Fully fluid Light and Dark mode variations that dynamically respect user layout boundaries.
+- **Responsive Adaptability:** Clean fluid design supporting large format Desktops, operational Tablets, and Mobile screens.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🏗️ Structural Component Map
+```text
+src/
+├── components/
+│   ├── Sidebar.tsx         # Context-aware structural app navigation maps
+│   ├── Header.tsx          # Session banners containing dark mode triggers
+│   ├── KPICards.tsx        # Dynamic data aggregate counters
+│   ├── ChartsSection.tsx   # Reusable operational Recharts components
+│   └── DataTable.tsx       # Search, sort, and paginated client database
+├── store/
+│   └── useStore.ts         # Unified Zustand store for asynchronous pipeline actions
+├── App.tsx                 # Root orchestrator managing conditional view state engines
+└── main.tsx                # Client environment initialization node
